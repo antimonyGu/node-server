@@ -1,11 +1,11 @@
 # node static server 
-`require('path')`：path 这个模块会处理我们的 URL ，因为在 Mac、Windows、Linux 上文件路径写法是不同的。
+require('path')：path 这个模块会处理我们的 URL ，因为在 Mac、Windows、Linux 上文件路径写法是不同的。
 
-`require('fs')`：fs 模块用于去读写文件。
+require('fs')：fs 模块用于去读写文件。
 
-`require('url')`：url 模块可自动解析 URL去得到一些信息，相当于我们直接使用一个 location。即：把 URL 进行解析然后得到这些数据，url 模块可把 URL 作为参数然后进行解析得到一个对象，然后我们就可以使用某些部分了，而不用我们自己再使用正则进行提取。
+require('url')：url 模块可自动解析 URL去得到一些信息，相当于我们直接使用一个 location。即：把 URL 进行解析然后得到这些数据，url 模块可把 URL 作为参数然后进行解析得到一个对象，然后我们就可以使用某些部分了，而不用我们自己再使用正则进行提取。
 
-`fs.readFile(filePath, 'binary', function(err, fileContent){}`：binary 表示用二进制的方式去读取。
+fs.readFile(filePath, 'binary', function(err, fileContent){}：binary 表示用二进制的方式去读取。
 
 res.end('<h1>404 Not Found</h1>')：相当于：
 
@@ -14,7 +14,7 @@ res.end();
 
 
 
-`res.write(fileContent, 'binary')`：通过二进制的方式发出读到的文件。
+res.write(fileContent, 'binary')：通过二进制的方式发出读到的文件。
 
 var server = http.createServer(function(req, res){
 staticRoot(path.join(__dirname, 'static'), req, res);
