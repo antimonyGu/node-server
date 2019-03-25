@@ -7,9 +7,9 @@ require('url')：url 模块可自动解析 URL去得到一些信息，相当于�
 
 fs.readFile(filePath, 'binary', function(err, fileContent){}：binary 表示用二进制的方式去读取。
 
-res.end('<h1>404 Not Found</h1>')：相当于：
+`res.end('<h1>404 Not Found</h1>')`：相当于：
 
-res.write('<h1>404 Not Found</h1>');
+`res.write('<h1>404 Not Found</h1>')`;
 res.end();
 
 
